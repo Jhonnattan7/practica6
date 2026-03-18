@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/app/lib/prisma";
 
 // Esquema de validación para el formulario de reserva.
 // servicioId llega como string desde el select y se convierte a número con z.coerce.

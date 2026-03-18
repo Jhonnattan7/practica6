@@ -3,7 +3,7 @@
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { z } from "zod";
-import { prisma } from "@/lib/prisma";
+import { prisma } from "@/app/lib/prisma";
 
 // Esquema de validación para el formulario de servicio.
 // z.coerce.number() convierte el string del formulario a número antes de validar.
