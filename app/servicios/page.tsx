@@ -12,20 +12,25 @@ export default async function PaginaServicios() {
     return (
         <div>
             <div className="flex items-center justify-between mb-6">
-                <h1 className="text-xl font-semibold">Servicios</h1>
-                <Link href="/servicios/nuevo" className="bg-black text-white px-4 py-2 rounded 
-text-sm">
+                <h1 className="text-2xl font-semibold">Servicios</h1>
+                <Link
+                    href="/servicios/nuevo"
+                    className="bg-black text-white px-4 py-2 rounded text-base hover:bg-gray-800 transition-colors"
+                >
                     Agregar servicio
                 </Link>
             </div>
-            <ul className='space-y-3'>
+            <ul className="space-y-3">
                 {servicios.map((servicio) => (
-                    <li key={servicio.id} className={`${tarjeta} flex items-center justify
-between`}>
+                    <li
+                        key={servicio.id}
+                        className={`${tarjeta} flex items-start justify-between`}
+                    >
                         <div>
-                            <p className='font-medium text-sm'>{servicio.nombre}</p>
-                            <p className='text-xs text-gray-400'>{servicio.duracion} min —
-                                {servicio._count.reservas} reserva(s)</p>
+                            <p className="font-medium text-base">{servicio.nombre}</p>
+                            <p className="text-sm text-gray-500 mt-1">
+                                {servicio.duracion} min - {servicio._count.reservas} reserva(s)
+                            </p>
                         </div>
                         <BotonEliminarServicio id={servicio.id} />
                     </li>

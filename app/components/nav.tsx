@@ -14,14 +14,13 @@ export function Nav() {
  
   return ( 
     <header className="border-b border-gray-200 bg-white"> 
-      <div className="max-w-4xl mx-auto px-6 h-14 flex items-center justify
-between"> 
-        <span className="font-semibold text-sm">Panel de reservas</span> 
-        <nav className="flex items-center gap-6"> 
+      <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between gap-6"> 
+        <span className="font-semibold text-base tracking-tight whitespace-nowrap">Panel de reservas</span> 
+        <nav className="flex items-center gap-5 sm:gap-6"> 
           {enlaces.map(({ href, etiqueta }) => ( 
             <Link key={href} href={href} 
-              className={pathname === href ? 'text-black font-medium text-sm' : 
-'text-gray-500 text-sm hover:text-black'} 
+              className={pathname === href ? 'text-black font-medium text-base' : 
+'text-gray-500 text-base hover:text-black'} 
             > 
               {etiqueta} 
             </Link> 

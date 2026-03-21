@@ -15,7 +15,7 @@ export function BotonEliminarServicio({ id }: { id: number }) {
     }
 
     return (
-        <div className="text-right">
+        <div className="text-right shrink-0 ml-4">
             <button onClick={manejarClick} className={botonPeligro}>
                 Eliminar
             </button>

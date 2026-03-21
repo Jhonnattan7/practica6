@@ -1,3 +1,4 @@
+
 export const input =
   "w-full border border-gray-200 rounded px-3 py-2 text-sm bg-white focus:outline-none focus:ring-1 focus:ring-black";
 
